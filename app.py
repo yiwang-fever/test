@@ -1,7 +1,12 @@
-import os
+from flask import Flask, request
+import sqlite3
 
-def run(cmd):
-    os.system(cmd)
+app = Flask(__name__)
 
-user_input = input("Command: ")
-run(user_input)
+@app.route("/user")
+def user():
+    name = request.args.get("name")
+    conn = sqlite3.connect("test.db")
+    cursor = conn.cursor()
+    cursor.execute("SELECT * FROM users WHERE name = '%s'" % name)
+    return "ok"
