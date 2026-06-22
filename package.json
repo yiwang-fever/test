@@ -1,0 +1,15 @@
+{
+  "name": "dependency-graph-test",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Fixture for GitHub Dependency Graph and Dependabot alert testing",
+  "license": "UNLICENSED",
+  "dependencies": {
+    "axios": "0.21.1",
+    "chalk": "5.3.0",
+    "express": "4.21.2",
+    "lodash": "4.17.15",
+    "minimist": "1.2.5",
+    "uuid": "11.0.5"
+  }
+}
